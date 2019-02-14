@@ -272,7 +272,7 @@ sub _process_response {
         ouch 500, 'Server returned unparsable content.', { error => $@, content => $response->decoded_content };
     }
     elsif ($response->is_success) {
-        return $result->{result};
+        return from_json($response->content);
     }
     else {
         ouch $response->code, $response->as_string;

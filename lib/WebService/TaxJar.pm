@@ -96,7 +96,7 @@ you're having problems.
     my $sales_tax = $taxjar->get('taxes', $order_information);
     if ($taxjar->debug_flag) {
         $log->info($taxjar->last_response->request->as_string);
-        $log->info($taxjar->last-response->content);
+        $log->info($taxjar->last_response->content);
     }
 
 =cut

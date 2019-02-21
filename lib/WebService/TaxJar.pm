@@ -88,6 +88,19 @@ A boolean that, if true, will send all requests to TaxJar's sandbox environment 
 
 =cut
 
+=item debug_flag
+
+Just a spare, writable flag so that users of the object should log debug information, since TaxJar will likely ask for request/response pairs when
+you're having problems.
+
+    my $sales_tax = $taxjar->get('taxes', $order_information);
+    if ($taxjar->debug_flag) {
+        $log->info($taxjar->last_response->request->as_string);
+        $log->info($taxjar->last-response->content);
+    }
+
+=cut
+
 has api_key => (
     is          => 'ro',
     required    => 1,
@@ -100,6 +113,12 @@ has version => (
 
 has sandbox => (
     is          => 'ro',
+    required    => 0,
+    default     => sub { 0 },
+);
+
+has debug_flag => (
+    is          => 'rw',
     required    => 0,
     default     => sub { 0 },
 );

@@ -228,6 +228,18 @@ A hash reference of parameters you wish to pass to Tax Jar.  They will be encode
 
 =back
 
+=head2 Notes
+
+The path you provide as arguments to the request methods C<get, post, put delete> should not have a leading slash.
+
+As of early 2019:
+
+The current version of their API is 'v2'.  There is no default value for the C<version> parameter, so please provide this when creating a WebService::TaxJar object.
+
+TaxJar does not provide a free sandbox for prototyping your code, it is part of their premium service level.
+
+TaxJar's sandbox mode does not implement all API endpoints.
+
 =cut
 
 sub post {

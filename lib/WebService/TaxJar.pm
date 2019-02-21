@@ -299,7 +299,7 @@ L<https://github.com/perldreamer/WebService-TaxJar>
 
 =item Bug Reports
 
-L<https://github.com/rizen/WebService-TaxJar/issues>
+L<https://github.com/perldreamer/WebService-TaxJar/issues>
 
 =back
 

@@ -3,7 +3,7 @@ use warnings;
 package WebService::TaxJar;
 
 use HTTP::Thin;
-use HTTP::Request::Common;
+use HTTP::Request::Common qw/GET DELETE PUT POST/;
 use HTTP::CookieJar;
 use JSON;
 use URI;
@@ -178,7 +178,7 @@ sub get {
     my ($self, $path, $params) = @_;
     my $uri = $self->_create_uri($path);
     $uri->query_form($params);
-    return $self->_process_request( GET $uri );
+    return $self->_process_request( GET $uri->as_string );
 }
 
 =head2 delete(path)
@@ -203,7 +203,7 @@ sub delete {
     my ($self, $path, $params) = @_;
     my $uri = $self->_create_uri($path);
     $uri->query_form($params);
-    return $self->_process_request( DELETE $uri );
+    return $self->_process_request( DELETE $uri->as_string );
 }
 
 =head2 put(path, json)

@@ -24,7 +24,7 @@ WebService::TaxJar - A simple client to L<TaxJar's REST API|https://www.taxjar.c
 
 =head1 DESCRIPTION
 
-A light-weight wrapper for TaxJar's RESTful API (an example of which can be found at: L<https://www.thegamecrafter.com/developer/>). This wrapper basically hides the request cycle from you so that you can get down to the business of using the API. It doesn't attempt to manage the data structures or objects the web service interfaces with.
+A light-weight wrapper for TaxJar's RESTful API (an example of which can be found at: L<https://https://developers.taxjar.com/api/reference/>). This wrapper basically hides the request cycle from you so that you can get down to the business of using the API. It doesn't attempt to manage the data structures or objects the web service interfaces with.
 
 The module takes care of all of these things for you:
 
